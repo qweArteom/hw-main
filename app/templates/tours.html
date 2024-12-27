@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Тури</h1>
+<ul>
+    {% for tour_id, tour in tours.items() %}
+    <li>
+        <h2>{{ tour.title }}</h2>
+        <img src="{{ tour.picture }}" alt="{{ tour.title }}">
+        <p>Ціна: {{ tour.price }} UAH</p>
+        <p>Місце: {{ tour.country }}</p>
+        <p>Тривалість: {{ tour.nights }} ночей</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
